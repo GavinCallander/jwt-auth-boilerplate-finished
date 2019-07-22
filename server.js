@@ -25,7 +25,7 @@ const signupLimiter = new RateLimit({
   message: "Maximum accounts creatd. Please try again later."
 })
 
-mongoose.connect('mongodb://localhost/jwt', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/endless-eats', {useNewUrlParser: true});
 const db = mongoose.connection;
 db.once('open', () => {
   console.log(`Connected to Mongo on ${db.host}:${db.port}`);
